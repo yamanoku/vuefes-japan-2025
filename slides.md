@@ -28,11 +28,11 @@ layout: center
 
 <div grid="~ cols-2 gap-x-10" class="content-center">
   <img src="./images/image18.png" alt="">
-  
+
   <img src="./images/image4.png" alt="">
-  
+
   Vue Fes Japan Online 2022での発表資料
-  
+
   Vue Fes Japan 2023での発表資料
 </div>
 
@@ -52,7 +52,7 @@ layout: center
 layout: center
 ---
 
-# 今日のWebアクセシビリティに関する状況・情報
+# 今日のWebアクセシビリティに<br>関する状況・情報
 
 ---
 layout: section
@@ -60,7 +60,7 @@ layout: section
 
 ## Web Almanac 2024のアクセシビリティ
 
-<img src="./images/image10.png" alt="Web Almanac 2024 Accessibility">
+<img src="./images/image10.png" alt="Web Almanac 2024 Accessibility" width="640">
 
 ---
 layout: section
@@ -70,61 +70,35 @@ layout: section
 
 - Lighthouse のアクセシビリティスコア中央値は 84% に上昇
 - alt属性ありのサイトは69%
-    - ただし値が空であったり短すぎる値やファイル名のままの値だったりする
+  - ただし「空の値」「短すぎる値」「ファイル名ママの値」が少なからず存在する
 - 7割以上のサイトが十分なコントラストの確保で基準が未達
 - 動画・音声コンテンツのアクセシビリティ確保はほぼゼロの状態
 - アクセシビリティオーバーレイの問題点について
 
+<v-clicks>
+
 以前の調査結果より改善傾向にあるが大幅に何かが変わったわけではない。
 
 <b>アクセシビリティをゴールとしないことが肝要。</b>
-
----
-layout: center
----
-
-<div class="flex justify-center">
-  <img src="./images/image7.png" width="640" alt="">
-</div>
-
-<small>
-出典：Web Almanac 2024: Accessibility - Most Accessible JavaScript Frontend UI Frameworks.
-</small>
-
----
-layout: center
----
-
-<div class="flex justify-center">
-  <img src="./images/image5.png" width="640" alt="">
-</div>
-
-<small>
-出典：Web Almanac 2024: Accessibility - Most Accessible JavaScript Meta-frameworks.
-</small>
+</v-clicks>
 
 ---
 layout: section
 ---
 
-## 欧州アクセシビリティ法（EAA）の施行
-
-- 2025年6月28日より完全施行（2019年に公布・採択）
-- EU市場において販売、提供されるさまざまなデジタル製品・サービスを、障害者にとってアクセシブルなものとするための法律
-    - EN 301 549という欧州規格への適応
-- 日本国内にあっても、EU加盟国においてデジタル製品・サービスを販売している企業であれば、EAAの適用対象となる可能性がある
+## WCAGについて
 
 ---
 layout: section
 ---
 
-## WCAG 2.2がJIS X 8341-3へ適応される予定
+## JIS X 8341-3が改正されWCAG 2.2相当になる予定
 
 - JIS（日本工業規格）におけるウェブコンテンツのアクセシビリティにまつわる国家規格がJIS X 8341-3:2016
 - WCAG 2.0をベースに2016年に改定されて以来更新がなかった
-- 国際規格が今年見直され、WCAG2.2をベースとしてISO/IEC DIS 40500として規格化
+- 国際規格が今年見直され、WCAG2.2をベースにISO/IEC DIS 40500として2025年9月に規格化
 - JIS規格側もこの変更に併せて更新を進めている
-    - [JIS X 8341-3の改正に関する準備──ウェブアクセシビリティ基盤委員会 作業部会6 | ウェブアクセシビリティ基盤委員会（WAIC）](https://waic.jp/news/ciaj-column-13/)
+  - [JIS X 8341-3の改正に関する準備──ウェブアクセシビリティ基盤委員会 作業部会6 | ウェブアクセシビリティ基盤委員会（WAIC）](https://waic.jp/news/ciaj-column-13/)
 
 ---
 layout: center
@@ -138,18 +112,15 @@ layout: center
 出典：デジタル庁 ウェブアクセシビリティ導入ガイドブック（2024年3月29日発行）p.16
 </small>
 
-
 ---
 layout: section
 ---
 
 ## 徐々にWCAG2.2へ移行していく準備をしておく
 
-- これからアクセシビリティに取り組む場合はWCAG2.0からスタートし、WCAG2.1、WCAG2.2の改定されたものへ徐々に移行していく
-- 現在の規格への対応作業を行うことで、将来の規格にも円滑に対応できるようになる
-- 廃止される基準（4.1.1）については除いておくようにする
-    - なおJIS X 8341-3:2016への準拠する場合はチェックする対象となる
-- axe-coreのタグについてはまだWCAG 2.2レベルA準拠のものはないことに注意
+- JISの改訂は順調に進めば、[2026年夏ごろに新しいJIS X 8341-3が公示される見込み](https://www.ceatec.com/ja/conference/detail.html?id=3075)
+- これからアクセシビリティに取り組む場合は、WCAG2.2をベースとしたものから取り組むことをお勧めする
+- WCAG2.1以前のものから対応している場合、2.2から廃止される[達成基準 4.1.1: 構文解析を理解する](https://waic.jp/translations/WCAG21/Understanding/parsing.html)について除いておくようにする
 
 ---
 layout: center
@@ -167,7 +138,7 @@ layout: section
 - モデル性能差によって結果に差異がある可能性はあります
 - 独自で検証したものもありケースによっては適応できない可能性もあります
 - 主にAIエージェントを活用したコード観点での紹介
-    - Figmaなどのデザインツール連携については今回は取り扱わないものとする
+  - Figmaなどのデザインツール連携については今回は取り扱わないものとする
 
 ---
 layout: statement
@@ -194,11 +165,9 @@ layout: section
 
 ## LLMはアクセシブルなコードを生成できるか？という研究
 
-
 <div class="my-4">
   <img src="./images/image13.png" width="640" alt="">
 </div>
-
 
 <small>
   <a href="https://arxiv.org/abs/2503.15885">[2503.15885] Human or LLM? A Comparative Study on Accessible Code Generation Capability</a>
@@ -226,7 +195,9 @@ layout: section
 
 カラーコントラストや代替テキストの挿入、フォームのラベル付けといった基本的なアクセシビリティ要件への対処ができているようになった。
 
+<v-click>
 <b>生成AIは何も指定しなくとも正しくHTML要素を使ってくれることが証明された。</b>
+</v-click>
 
 ---
 layout: statement
@@ -241,7 +212,7 @@ layout: statement
 layout: statement
 ---
 
-<h1>😄</h1>
+<h1 style="font-size: 10rem;">😄</h1>
 
 ---
 layout: statement
@@ -281,8 +252,14 @@ layout: section
 - 元のHTML構造を変更できない、リファクタリングなどができない場合
   - WAI-ARIAによって要素の意味合いを変える
 - しかし生成AIはWAI-ARIAを実装をさせると誤った実装が見られることがある
-- "No ARIA is better than Bad ARIA"
-    - 「悪いARIAよりもARIAなしの方が良い」
+
+<v-click>
+
+> "No ARIA is better than Bad ARIA"
+
+> 「悪いARIAよりもARIAなしの方が良い」
+
+</v-click>
 
 ---
 
@@ -305,14 +282,14 @@ layout: section
 
 ## FeedA11yの仕組み
 
-<img src="./images/image9.png" alt="FeedA11yの仕組み">
+<img src="./images/image9.png" width="480" alt="FeedA11yの仕組み">
 
 ---
 
 ## 改善のサイクルを回す仕組みづくり
 
 - LLMが推論して、再度行動をすることで高い精度が得られるようになる手法
-    - Reason-Act（ReAct）と呼ばれるもの
+  - Reason-Act（ReAct）と呼ばれるもの
 - プロンプトにアクセシビリティ準拠指示を出す、正誤コード例を提示する、レビューされたのちに修正1回だけする、という指示よりも成果があった
 - 正誤コード例を提示する手法がもっとも悪い結果になった
 - ただし微妙なARIAの制約や意味論の部分で正確性を欠くことはある
@@ -339,7 +316,7 @@ layout: section
 
 ## aria-validate-mcp-server
 
-<img src="./images/image14.png" alt="aria-validate-mcp-server" class="absolute right-5 top-5 w-64">
+<img src="./images/image14.png" alt="aria-validate-mcp-server" class="absolute right-15 top-10 w-64">
 
 - aria-queryを活用したARIAのバリデーション用MCPサーバー
 - role、ARIA属性のそれぞれを取得できる
@@ -364,16 +341,16 @@ class: bg-[#faf9f5]
 
 - WAI-ARIAで活用するためのID自体が被ってしまう可能性がある
 - 各ライブラリには一意のIDを生成するAPIが搭載されている
-    - React: https://ja.react.dev/reference/react/useId
-    - Vue.js: https://ja.vuejs.org/api/composition-api-helpers#useid
-    - Svelte: https://svelte.jp/docs/svelte/$props#$props.id()
+  - React: https://ja.react.dev/reference/react/useId
+  - Vue.js: https://ja.vuejs.org/api/composition-api-helpers#useid
+  - Svelte: https://svelte.jp/docs/svelte/$props#$props.id()
 - 事前に活用するようにAGENTs.mdなどに指示しておく
 
 ---
 
 ## baseline-mcp-server
 
-<img src="./images/image16.png" alt="baseline-mcp-server" class="absolute right-5 top-5 w-64">
+<img src="./images/image16.png" alt="baseline-mcp-server" class="absolute right-15 top-10 w-64">
 
 - Baselineの状況を確認できるMCPサーバー
 - WAI-ARIAではなく最新のHTML・CSSを活用できるかの知識に活用
@@ -388,8 +365,8 @@ class: bg-[#faf9f5]
 - MCPサーバーを毎回活用するのではなくプロンプト化していく
 - UIのサンプルコードとして提供できるようにしておく
 - AIへの活用だけではなく人間もチェックできるようなものとしておく
-    - ダブルチェックができる
-    - 汎用的に確認できるドキュメントとなる
+  - ダブルチェックができる
+  - 汎用的に確認できるドキュメントとなる
 
 ---
 
@@ -397,9 +374,10 @@ class: bg-[#faf9f5]
 
 - コードをみるだけでは気づけないこともある
 - であれば「表層されたもの」にも注目してみる
-- Playwright MCPはaccessibility treeを見て実行する
-    - アクセシブルな名前をチェックしてみる
-    - aria-hiddenによってコンテンツが消えていないか？
+- [Playwright MCP](https://github.com/microsoft/playwright-mcp)はAccessibility treeを見て実行する
+  - アクセシブルな名前をチェックしてみる
+  - `aria-hidden`によってコンテンツが消えていないか？
+- Chrome DevTools MCPは現時点でAccessibility Treeを見てはくれない
 
 ---
 layout: statement
@@ -414,13 +392,13 @@ layout: statement
 - テストケースにバイアスがかかっている状態
 - 意図的に当事者に近い状況のデータを投入してみる
 - 当事者のペルソナを設定したテストケースを用意してみる
-    - 実際のユーザーインタビューでの結果を参考にするのも良い
+  - 実際のユーザーインタビューでの結果を参考にするのも良い
 
 ---
 
 ## インクルーシブなペルソナ拡張
 
-<img src="./images/image17.png" alt="">
+<img src="./images/image17.png" width="560" alt="">
 
 <small>https://github.com/caztcha/Inclusive-Persona-Extension</small>
 
@@ -445,8 +423,8 @@ class: bg-[#24292e]
 - 当事者を想定したテストケースに則った操作を検討してくれる
 - E2Eテスト観点でアクセシビリティにまつわるチェック指示ができる
 - キーボード操作（タブキー遷移）できるかどうか
-    - クリックができるかどうか
-    - フォーカス順序がどうなっているか
+  - クリックができるかどうか
+  - フォーカス順序がどうなっているか
 
 ---
 layout: statement
@@ -458,32 +436,19 @@ layout: statement
 
 ## 守りのためのLinter
 
-- 各種eslint-plugin、Biome、oxlintなどでアクセシビリティチェックすることも忘れず
-    - React: eslint-plugin-jsx-a11y
-    - Vue.js: eslint-plugin-vuejs-accessibility
-    - Svelte: svelte-check
-- HTMLのLintとしてMarkuplintを活用
+- 各種ESLint Plugin、Biome、Oxlintなどでアクセシビリティチェックすることも忘れず
+  - React: [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
+  - Vue.js: [eslint-plugin-vuejs-accessibility](https://github.com/vue-a11y/eslint-plugin-vuejs-accessibility)
+  - Svelte: svelte-check
+- HTMLのLintとして[Markuplint](https://markuplint.dev/ja/)も活用
 
 ---
 
 ## レポートフォーマットによってチェックシート生成
 
-<img src="./images/image19.png" alt="">
+<img src="./images/image19.png" width="560" alt="">
 
 <small>出典：株式会社Gaudiy Automating Web Accessibility Testing with AI Agents p.38</small>
-
----
-
-## 最終的な人間によるレビューは必要
-
-- LLMの利点は使用するユーザーと対話的をしながら修正を行うことができる点
-- Vibe Codingするにしても、内容の見直しや事象の把握は必要
-- 実際に自らで体験することも忘れない
-- テストはうまく通ってるが意図通りになっているかわからない場合もある
-
-生成されたアウトプットへの責任を持つのは人間
-
-「アクセシビリティ」だけに限らない大事な観点
 
 ---
 
@@ -491,7 +456,8 @@ layout: statement
 
 - AIがHTMLを正しく書いてくれることでアクセシブルなものが作れている
 - ただしニュートラルな状態では「完璧な」アクセシビリティ改善というものはない
-- あいまいな指示よりも明確な指示をもって改善を行う
+- 「アクセシビリィ的に」というような曖昧な指示よりも、明確な修正意図をもって指示をする
+  - 画像の代替テキスト、ARIAのチェック等
 - MCPやデータセットを活用し不備・欠落をなくしていく
 - 人間のレビューを必ず入れることを忘れない
 
@@ -506,9 +472,9 @@ layout: section
 ## DequeのAxe AIによるアクセシビリティチェック
 
 - [Digital Accessibility Innovation with Axe AI | Deque Systems](https://www.deque.com/axe/ai/)
-    - axe MCP Server
-    - axe Assistant
-    - axe DevTools Extension
+  - axe MCP Server
+  - axe Assistant
+  - axe DevTools Extension
 
 ---
 
@@ -519,6 +485,23 @@ layout: section
 - チャットUIで他のUIはすべて不要になる？それは本当？
 - AIへ意図通りの指示を出せるのも１つの技能
 - 直接の操作でもAIによる操作でも使える選択肢を用意できるようにする
+
+---
+
+## 最終的な人間によるレビューは必要
+
+- LLMの利点は使用するユーザーと対話的をしながら修正を行うことができる点
+- Vibe Codingするにしても、内容の見直しや事象の把握は必要
+- 実際に自らで体験することも忘れない
+- テストはうまく通ってるが意図通りになっているかわからない場合もある
+
+<v-clicks>
+
+<span style="font-size: 1.4rem">生成されたアウトプットへの責任を持つのは人間</span>
+
+<span style="font-size: 1.6rem"><b>「アクセシビリティ」だけに限らない大事な観点</b></span>
+
+</v-clicks>
 
 ---
 
@@ -551,13 +534,18 @@ layout: statement
 
 ---
 
-## 謝辞
+# 謝辞
 
-- スライド作成にあたり活用したLLM、サービス
-- レビューしてくれた人を載せる（希望者のみ）
+## スライド作成にあたり活用したLLM、サービス
+
+- NotebookLM
+
+## レビュワー
+
+kouno, magi1125, kubosho, takanorip
 
 ---
-layout: end
+layout: intro
 ---
 
-# Thank you for listening!
+<h1 mt="40">Thank you for listening!</h1>
