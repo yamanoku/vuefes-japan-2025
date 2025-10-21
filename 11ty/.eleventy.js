@@ -21,7 +21,7 @@ export default function (eleventyConfig) {
   return {
     dir: {
       input: "pages",
-      output: "docs",
+      output: "../docs",
     },
   };
 };
