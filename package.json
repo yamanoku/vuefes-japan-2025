@@ -3,6 +3,8 @@
   "type": "module",
   "scripts": {
     "build": "pnpm run -r build",
+    "11ty": "pnpm -C 11ty",
+    "slidev": "pnpm -C slidev",
     "deploy": "gh-pages -d docs -b gh-pages -m 'chore: deploy' -t"
   },
   "author": "yamanoku",
