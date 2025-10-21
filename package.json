@@ -1,0 +1,10 @@
+{
+  "name": "vuefes-japan-2025",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm run -r build"
+  },
+  "author": "yamanoku",
+  "license": "ISC",
+  "packageManager": "pnpm@10.18.3"
+}
