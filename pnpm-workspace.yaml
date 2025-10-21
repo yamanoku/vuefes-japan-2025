@@ -1,3 +1,18 @@
 packages:
   - 11ty/**
   - slidev/**
+
+catalogs:
+  11ty:
+    "@11ty/eleventy": 3.1.2
+    budoux: 0.7.0
+    markdown-it: 14.1.0
+    markdown-it-footnote: 4.0.0
+  slidev:
+    "@slidev/cli": 52.4.0
+    "@slidev/theme-apple-basic": 0.25.1
+    vue: 3.5.22
+  root:
+    gh-pages: 6.3.0
+
+catalogMode: strict

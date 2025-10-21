@@ -7,7 +7,7 @@
   },
   "author": "yamanoku",
   "devDependencies": {
-    "gh-pages": "6.3.0"
+    "gh-pages": "catalog:root"
   },
   "packageManager": "pnpm@10.18.3"
 }

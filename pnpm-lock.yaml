@@ -4,39 +4,68 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  11ty:
+    '@11ty/eleventy':
+      specifier: 3.1.2
+      version: 3.1.2
+    budoux:
+      specifier: 0.7.0
+      version: 0.7.0
+    markdown-it:
+      specifier: 14.1.0
+      version: 14.1.0
+    markdown-it-footnote:
+      specifier: 4.0.0
+      version: 4.0.0
+  root:
+    gh-pages:
+      specifier: 6.3.0
+      version: 6.3.0
+  slidev:
+    '@slidev/cli':
+      specifier: 52.4.0
+      version: 52.4.0
+    '@slidev/theme-apple-basic':
+      specifier: 0.25.1
+      version: 0.25.1
+    vue:
+      specifier: 3.5.22
+      version: 3.5.22
+
 importers:
 
   .:
     devDependencies:
       gh-pages:
-        specifier: 6.3.0
+        specifier: catalog:root
         version: 6.3.0
 
   11ty:
     dependencies:
       '@11ty/eleventy':
-        specifier: 3.1.2
+        specifier: catalog:11ty
         version: 3.1.2
       budoux:
-        specifier: 0.7.0
+        specifier: catalog:11ty
         version: 0.7.0
       markdown-it:
-        specifier: 14.1.0
+        specifier: catalog:11ty
         version: 14.1.0
       markdown-it-footnote:
-        specifier: 4.0.0
+        specifier: catalog:11ty
         version: 4.0.0
 
   slidev:
     dependencies:
       '@slidev/cli':
-        specifier: 52.4.0
+        specifier: catalog:slidev
         version: 52.4.0(@babel/parser@7.28.4)(@nuxt/kit@3.19.3)(@types/markdown-it@14.1.2)(@types/node@22.18.12)(@vue/compiler-sfc@3.5.22)(markdown-it-async@2.2.0)(postcss@8.5.6)
       '@slidev/theme-apple-basic':
-        specifier: 0.25.1
+        specifier: catalog:slidev
         version: 0.25.1
       vue:
-        specifier: 3.5.22
+        specifier: catalog:slidev
         version: 3.5.22(typescript@5.9.3)
 
 packages:
@@ -3350,7 +3379,7 @@ snapshots:
     dependencies:
       '@babel/code-frame': 7.27.1
       '@babel/generator': 7.28.3
-      '@babel/parser': 7.27.7
+      '@babel/parser': 7.28.4
       '@babel/template': 7.27.2
       '@babel/types': 7.28.4
       debug: 4.4.3
