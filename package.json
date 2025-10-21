@@ -5,6 +5,6 @@
     "build": "pnpm run -r build"
   },
   "author": "yamanoku",
-  "license": "ISC",
+  "license": "MIT",
   "packageManager": "pnpm@10.18.3"
 }
