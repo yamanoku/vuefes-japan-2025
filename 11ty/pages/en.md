@@ -1,7 +1,7 @@
 ---
 layout: layout
-title: Document Page Template (English)
-description: Template for making a document page from a @yamanoku presentation.
+title: Improving Web App Accessibility in the Generative AI Era
+description: yamanoku's presentation at Vue Fes Japan 2025
 lang: en
 ---
 
