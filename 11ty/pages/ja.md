@@ -1,11 +1,11 @@
 ---
 layout: layout
-title: 生成AI時代におけるWebアプリケーションのアクセシビリティ改善
+title: 生成AI時代のWebアプリケーションアクセシビリティ改善
 description: Vue Fes Japan 2025の登壇資料
 lang: ja
 ---
 
-![スライドタイトル：生成AI時代におけるWebアプリケーションのアクセシビリティ改善](../images/image.png)
+![スライドタイトル：生成AI時代のWebアプリケーションアクセシビリティ改善](../images/title.png)
 
 ## 翻訳記事一覧
 
@@ -24,7 +24,7 @@ Vue Fes Japan Online 2022では[Vue.jsでアクセシブルなコンポーネン
 
 <figure>
 
-![](../images/image12.png)
+![特定の状況での使いやすさを指すユーザビリティと使える度合いや状況の幅広さを指すアクセシビリティの違いを示す図。縦軸は使いやすさの度合い（上が使いやすく、下が使えない）、横軸はユーザー層（ターゲット層、健常者、高齢者、障害者、初心者、外国人）。サービスのターゲット層や健常者は使いやすい位置にあり、その他の層は使いにくさの度合いが異なっている。](../images/usability-accessibility.png)
 
 <figcaption>出典：間嶋沙知・著 <a href="https://komatta-design.studio.site/">見えにくい、読みにくい「困った！」を解決するデザイン【改訂版】</a> p.20</figcaption>
 </figure>
@@ -48,7 +48,7 @@ WCAGは、W3Cが策定する国際的なアクセシビリティのガイドラ�
 
 <figure>
 
-![](../images/image8.png)
+![WCAG、ISO（国際規格）、JIS（国家規格）の関係性と更新状況を示す図。WCAG 2.0はISO/IEC 40500:2012およびJIS X 8341-3:2016と技術的に同等であることが示されており、WCAG 2.1および2.2はそれぞれのアップデート版として位置づけられている。現在のJIS規格はWCAG 2.0ベースだが、WCAG 2.2を基にして改正が進行中である](../images/wcag-iso-jis.png)
 
 <figcaption>出典：デジタル庁 <a href="https://www.digital.go.jp/resources/introduction-to-web-accessibility-guidebook">ウェブアクセシビリティ導入ガイドブック</a>（2024年3月29日発行）p.16
 </figcaption>
@@ -88,7 +88,7 @@ __おことわり__
 
 このテーマに関連しそうな情報を探してみたところ、[LLMはアクセシブルなコードを生成できるのかを研究した論文](https://arxiv.org/abs/2503.15885)が見つかりましたので紹介いたします。
 
-この研究では、人間が書いたコードとLLMが生成したコードとでどちらがアクセシビリティ違反が少ないかを比較・検証しました。対象となったのは現在進行形で更新があり、注目されているOSSのWebサイトソースコードが選ばれました。この中にはVue.jsの公式ドキュメントサイトも選ばれています。
+この研究では、人間が書いたコードとLLMが生成したコードとでどちらがアクセシビリティ違反が少ないかを比較・検証しました。対象となったのは現在進行形で更新があり、注目されているOSSのWebサイトソースコードが選ばれました。この中には[Vue.jsの公式ドキュメントサイト](https://vuejs.org/)も選ばれています。
 
 違反の検証として[IBMのアクセシビリティチェッカー](https://github.com/IBMa/equal-access)と[QualWeb](https://qualweb.di.fc.ul.pt/evaluator/)というチェックツールが選ばれました。これは他チェックツールと比較して多くの違反を検出できるものだったからです。ルールはWCAG2.1を基準としてチェックが行われました。
 
@@ -109,7 +109,7 @@ __おことわり__
 
 <figure>
 
-![](../images/feeda11y.png)
+![FeedA11yの仕組みを示すフローチャート。要約から始まり、Generator LLMがコードを生成し、『変更が必要か？』の判断により、必要な場合はOptimizer LLMがそのコードをレビューしてアクセシビリティレポートを作成、レポートをもとにコードが再生成される。最終的に生成物が完成する。](../images/feeda11y.png)
 
 <figcaption>出典：<a href="https://arxiv.org/abs/2503.15885">[2503.15885] Human or LLM? A Comparative Study on Accessible Code Generation Capability</a>
 </figcaption>
@@ -180,7 +180,9 @@ WAI-ARIAを使った場合は実際にアクセシビリティツリーがどう
 
 この内容を確認するために[Playwright MCP](https://github.com/microsoft/playwright-mcp)を使用しましょう。Playwright MCPの画期的なものの１つとしてアクセシビリティツリーを見て実行しているという点があげられます。これを活用し、全体のアクセシブルネームがどうなっているか、要素同士の関係性がどうなっているかをチェックすることができます。
 
-ちなみに最近発表されたChrome DevTools MCPにはまだアクセシビリティツリーを読み取る機能が備わっていません。そのためPlaywright MCPを使用することをお勧めします。
+ちなみに最近発表された[Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp)にはまだアクセシビリティツリーを読み取る機能が備わっていません[^1]。そのためPlaywright MCPを使用することをお勧めします。
+
+[^1]: [Accessibility tree/element(s) snapshot - exposing semantics, roles, states, ARIA,... · Issue #363 · ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp/issues/363)
 
 ほかにもPlaywright MCPではキーボード操作（タブキー遷移）でのチェックやフォーカス順序の確認 など、E2Eテスト観点でアクセシビリティのチェック指示が可能なので活用していきましょう。
 
@@ -204,13 +206,15 @@ Reactであれば[eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-p
 
 ## おわりに
 
-現代のWebアクセシビリティ改善でなくてはならない存在であるAxeの開発するDeque社もアクセシビリティチェックとAIと関連させた「[Axe AI](https://www.deque.com/axe/ai/)」プロジェクトを発表しています。
+現代のWebアクセシビリティ改善でなくてはならない存在であるaxeの開発するDeque社もアクセシビリティチェックとAIと関連させた「[Axe AI](https://www.deque.com/axe/ai/)」プロジェクトを発表しています。axe MCPサーバーやAI搭載のaxe DevTools Extension、Slackといったチャットツールと連携してアクセシビリティにまつわる相談ができるaxe Assistantなどが開発されています。
 
-Deque社が掲げる将来のビジョンは
+Deque社でのアクセシビリティテストのこれからについては以下のことを目指しています。
 
-> 「専門家でなくても100%のアクセシビリティテストを可能にすること」
+> 「専門家でなくても100%のアクセシビリティテストを可能にすること」[^2]
 
-です。これはかなり野心的な挑戦だと感じており、Webアクセシビリティの改善を考える同じ立場のものとして期待しているところはあります。
+[^2]: [Automation Gains: Increasing what can be automated in accessibility testing - axe-con](https://www.deque.com/axe-con/sessions/automation-gains-increasing-what-can-be-automated-in-accessibility-testing/)
+
+これはテストを100％自動化することではなく、アクセシビリティ改善にかかる時間を短縮し、より仕事をやりやすくすることを目的としています。このような効率性を考えたツール開発に対して、Webアクセシビリティの改善を考える立場のものとして期待しているところはあります。
 
 AIの進化は凄まじく、AIにすべて任せればアクセシビリティ問題は解決するのでは？と思うかもしれません。実際、[Be My Eyes](https://www.bemyeyes.com/ja/)のようなAIと障害当事者への問題解決に関連するプロダクトは存在しています。
 
@@ -226,9 +230,28 @@ AIの進化は凄まじく、AIにすべて任せればアクセシビリティ�
 
 生成AIを「武器」として使いこなし、アクセシブルなものを皆で共に作っていきましょう。
 
+## 謝辞
+
+### 本発表にあたり活用したLLMモデル、サービス・ソフトウェア
+
+- Claude Sonnet 4.5, Claude Ops 4, Gemini 2.5 Pro, GPT-5
+- NotebookLM, Google Gemini, Claude Desktop, Claude Code, Codex CLI
+
+### レビュワーの皆様
+
+[haribooooom](https://x.com/haribooooom), [hk_it7](https://x.com/hk_it7), [kubosho](https://x.com/kubosho_), [magi1125](https://x.com/magi1125), [takanorip](https://x.com/takanoripe), [ymrl](https://x.com/ymrl)
+
 ## 参考資料
 
 * [困った！を解決するデザイン](https://komatta-design.studio.site/)
 * [ウェブアクセシビリティ導入ガイドブック｜デジタル庁](https://www.digital.go.jp/resources/introduction-to-web-accessibility-guidebook)
 * [JIS X 8341-3の改正に関する準備──ウェブアクセシビリティ基盤委員会 作業部会6 | ウェブアクセシビリティ基盤委員会（WAIC）](https://waic.jp/news/ciaj-column-13/)
-
+* [アクセシビリティBlog | ナレッジ | ミツエーリンクス](https://www.mitsue.co.jp/knowledge/blog/a11y/)
+* [Accessible & Usable](https://accessible-usable.net/)
+* [AIとマークアップ｜magi1125](https://note.com/magi1125/n/n1296f9168104)
+* [ウェブアクセシビリティと生成AI - NotebookLM](https://notebooklm.google.com/notebook/e06d062b-2650-467d-86e7-ec9f4fa0e65b?authuser=1)
+* [Advancing AI for axe: The next leap in digital accessibility | Deque](https://www.deque.com/blog/advancing-ai-for-axe-the-next-leap-in-digital-accessibility/)
+* [noriyuki-shimizu/a11y-test-mcp](https://github.com/noriyuki-shimizu/a11y-test-mcp)
+* [Introducing Accessibility MCP Server | LambdaTest](https://www.lambdatest.com/support/docs/accessibility-mcp-server/)
+* [Automating Web Accessibility Testing with AI Agents - Speaker Deck](https://speakerdeck.com/maminami373/automating-web-accessibility-testing-with-ai-agents)
+* [Improving Accessibility Leveraging Large Language Models - Sheri Byrne-Haber (A11yTalks - GAAD 2024) - YouTube](https://www.youtube.com/watch?v=5wdNcy7yPCc)
