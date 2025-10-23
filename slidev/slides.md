@@ -305,7 +305,7 @@ layout: section
 
 ## 結果
 
-<v-click><div class="mb-5">人間の書いたコードよりもアクセシブルにすることができた</div></v-click>
+<v-click><div class="mb-5">人間の書いたコードよりもLLMの生成したコードがアクセシブルになっていた</div></v-click>
 
 <v-click>
 
