@@ -9,25 +9,17 @@ fonts:
   sans: Roboto, "Noto Sans JP"
 ---
 
-<h1 mt="12">Improving<br>Web App Accessibility<br>in the Generative AI Era</h1>
+<h1 mt="12">生成AI時代の<br>Webアプリケーション<br>アクセシビリティ改善</h1>
 
 <div mt="5">
 Vue Fes Japan 2025 | <time datetime="2025-10-25">2025-10-25</time>
 </div>
 
-<!--div class="absolute bottom-10">
+<div class="absolute bottom-10">
   <span class="text-6 font-700">
     やまのく（yamanoku）
   </span>
-</div-->
-
-<!--
-div class="absolute bottom-10">
-  <span class="text-6 font-700">
-    やまのく（yamanoku）
-  </span>
-</div
--->
+</div>
 
 ---
 layout: center
