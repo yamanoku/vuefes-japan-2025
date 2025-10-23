@@ -22,7 +22,13 @@ Vue Fes Japan Online 2022では[Vue.jsでアクセシブルなコンポーネン
 
 「アクセシビリティ」は、よく「ユーザビリティ」と混同されがちですが、ユーザビリティが「特定の状況での使いやすさ」を指すのに対し、アクセシビリティは「使える度合いや状況の幅広さ」を指します。
 
+<figure>
+
 ![](../images/image12.png)
+
+<figcaption>出典：間嶋沙知・著 <a href="https://komatta-design.studio.site/">見えにくい、読みにくい「困った！」を解決するデザイン【改訂版】</a> p.20</figcaption>
+</figure>
+
 
 ターゲット層だけでなく、高齢者、障害者、初心者、外国人など、様々な状況の人が「使えない」状態から「使える」、さらには「使いやすい」状態に引き上げることがアクセシビリティの目的です。そしてそれをWebで実現していくことがWebアクセシビリティと呼ばれるものです。
 
@@ -40,7 +46,13 @@ Webアクセシビリティを実現するために対応できるというこ�
 
 WCAGは、W3Cが策定する国際的なアクセシビリティのガイドラインです。4つの原則（知覚可能、操作可能、理解可能、堅牢）と3つの達成レベル（A, AA, AAA）が定められています。日本では、JIS規格（JIS X 8341-3:2016）が、このWCAGと「技術的に同等」の国家規格として定められています。
 
+<figure>
+
 ![](../images/image8.png)
+
+<figcaption>出典：デジタル庁 <a href="https://www.digital.go.jp/resources/introduction-to-web-accessibility-guidebook">ウェブアクセシビリティ導入ガイドブック</a>（2024年3月29日発行）p.16
+</figcaption>
+</figure>
 
 重要なのは、現在のJIS規格はWCAG 2.0がベースですが、現在改正作業が進んでおり、WCAG 2.2をベースにしたものに更新される予定であるということです。新しいJISは2026年夏ごろに公示される見込みです。ですので、これからWebアクセシビリティに取り組む場合は**WCAG 2.2をベースとしてチェックすることをお勧めします**。
 
@@ -50,7 +62,7 @@ WCAGは、W3Cが策定する国際的なアクセシビリティのガイドラ�
 
 ## 生成AIを活用したWebアクセシビリティ改善
 
-今回のテーマである「生成AIを活用して、より効率的にアクセシビリティ改善ができないだろうか？」について紹介していきます。
+それでは今回のテーマである「生成AIを活用して、より効率的にアクセシビリティ改善ができないだろうか？」について紹介していきます。
 
 <article style="border-width:1px; border-style:solid; border-color:var(--y-arcticle-border-color); padding-top:var(--y-rhythm-3); padding-left:var(--y-rhythm-3); padding-right:var(--y-rhythm-3);">
 
@@ -70,7 +82,7 @@ __おことわり__
 
 </article>
 
-### 生成AIはアクセシブルなコードを書ける？
+### AIエージェントはアクセシブルなコードを書ける？
 
 どのように改善できるかを考える前に、そもそも生成AIはアクセシブルなコードを書くことができるのか、プロンプトの精度でどれくらい変わるのか？というのが気になりました。
 
@@ -95,7 +107,14 @@ __おことわり__
 
 そこでその問題を解消するために「FeedA11y」という新しい手法を作成しました。これは「Reason-Act（ReAct）」と呼ばれる、LLMが推論と行動を繰り返すプロンプトのフレームワークを活用したものです。
 
+<figure>
+
 ![](../images/feeda11y.png)
+
+<figcaption>出典：<a href="https://arxiv.org/abs/2503.15885">[2503.15885] Human or LLM? A Comparative Study on Accessible Code Generation Capability</a>
+</figcaption>
+</figure>
+
 
 FeedA11yの仕組みについて紹介します。まず「Generator LLM」が、あえてアクセシビリティの指示を含めずにクリーンなコードを生成します。
 
@@ -107,7 +126,7 @@ FeedA11yの仕組みについて紹介します。まず「Generator LLM」が�
 
 ### レビューをしていくための手法
 
-レビューをすることが大事、ということがわかったので生成AIを活用してレビューするためのテストケースを作成していきます。
+最初からアクセシブルなコードを生成するよりも入念なレビューをすることが大事、ということがわかったので生成AIを活用してレビューするためのテストケースを作成していきます。
 
 Gaudiy社の例のように、統一されたフォーマットでチェックシートを生成させておくと生成AIが作業する上で有用です。この場合はWCAGの達成基準を元にどのチェックリストが埋められているかを確認できるようになっています。生成AIに達成基準を読み込ませて確認で必要なものをリストアップしてもらい独自のチェックシートを生成しておきましょう。
 
@@ -129,11 +148,15 @@ WAI-ARIAを使う事例として、HTML要素だけでは表現しきれない�
 
 さきほどの研究でも紹介がありましたが、生成AIは複雑なアクセシビリティ要件、特にWAI-ARIAにまつわる実装をさせると誤りが多くなります。これは生成AIがコードの「文脈」に沿ったARIAのユースケースや実装方法を正しく理解・学習できていない可能性があるからです。この誤りはWAI-ARIAを正しく理解できていない人間がコードを書く際にも同じような失敗は見受けられるため、納得できる結果かと思っています。
 
-この対策として、WAI-ARIAの仕様書をベースとしたRAG（Retrieval-Augmented Generation）を用意することや、仕様を理解したMCPを活用することが考えられます。今回はすぐ実践できるMCPサーバーの活用についてを取り上げてみます。
+この対策として、WAI-ARIAの仕様書をベースとした<abbr title="Retrieval-Augmented Generation">RAG</abbr>を用意することや、仕様を理解した<abbr title="Model Context Protocol">MCP</abbr>を活用することが考えられます。今回はすぐ実践できるMCPサーバーの活用についてを取り上げてみます。
 
 ### MCPサーバーを活用して間違いを減らす
 
-正しいWAI-ARIAの情報を取り扱うことのできるARIAバリデーション用MCPサーバーの「aria-validate-mcp-server」を作ってみました。
+正しいWAI-ARIAの情報を取り扱うことのできるARIAバリデーション用MCPサーバーの「[aria-validate-mcp-server](https://github.com/yamanoku/aria-validate-mcp-server)」を作ってみました。
+
+<figure>
+  <img src="https://github.com/yamanoku/aria-validate-mcp-server/blob/main/logo.png?raw=true" alt="ARIA Validate MCP Serverロゴ" width="300">
+</figure>
 
 これはアクセシビリティのESLint Pluginで使用されているaria-queryというライブラリを内部で用いています。WAI-ARIA 1.2の仕様に対応したroleや属性やARIA属性が、どの値を扱えるかをチェックすることができます。
 
@@ -145,11 +168,17 @@ WAI-ARIAを使用する際に必要となるID属性の管理も重要です。�
 - Vue.js: [https://ja.vuejs.org/api/composition-api-helpers#useid](https://ja.vuejs.org/api/composition-api-helpers#useid)
 - Svelte: [https://svelte.jp/docs/svelte/$props#$props.id()](https://svelte.jp/docs/svelte/$props#$props.id())
 
-また「WAI-ARIAを使うべきか、最新のHTML/CSSで対応すべきか」の判断も重要です。そのためにモダンブラウザでどのWeb APIが安定して使用できるかを知る「Baseline」の情報を確認できるMCPサーバーも作成してみています。各社プロダクトでの利用環境は異なると思うので、プロダクトごとでの扱うブラウザ範囲と相談しつつ、提示されたHTML/CSSが適応できるかどうかを調べてみてください。
+また「WAI-ARIAを使うべきか、最新のHTML/CSSで対応すべきか」の判断も重要です。そのためにモダンブラウザでどのWeb APIが安定して使用できるかを知るBaselineの情報を確認できる「[baseline-mcp-server](https://github.com/yamanoku/baseline-mcp-server/)」も作成してみています。
+
+<figure>
+  <img src="https://github.com/yamanoku/baseline-mcp-server/blob/main/logo.png?raw=true" alt="Baseline MCP Serverロゴ" width="300">
+</figure>
+
+各社プロダクトでの利用環境は異なると思うので、プロダクトごとでの扱うブラウザ範囲と相談しつつ、提示されたHTML/CSSが適応できるかどうかを調べてみてください。
 
 WAI-ARIAを使った場合は実際にアクセシビリティツリーがどう影響しているかをチェックすることも必要です。例えば`aria-hidden`によって意図せずコンテンツが消えていないかというのは、状況にもよるためコードだけ見ても良いか悪いかが分かりません。
 
-この内容を確認するためにPlaywright MCPを使用しましょう。Playwright MCPの画期的なものの１つとしてアクセシビリティツリーを見て実行しているという点があげられます。これを活用し、全体のアクセシブルネームがどうなっているか、要素同士の関係性がどうなっているかをチェックすることができます。
+この内容を確認するために[Playwright MCP](https://github.com/microsoft/playwright-mcp)を使用しましょう。Playwright MCPの画期的なものの１つとしてアクセシビリティツリーを見て実行しているという点があげられます。これを活用し、全体のアクセシブルネームがどうなっているか、要素同士の関係性がどうなっているかをチェックすることができます。
 
 ちなみに最近発表されたChrome DevTools MCPにはまだアクセシビリティツリーを読み取る機能が備わっていません。そのためPlaywright MCPを使用することをお勧めします。
 
@@ -159,7 +188,7 @@ WAI-ARIAを使った場合は実際にアクセシビリティツリーがどう
 
 そしてもちろん生成AIだけに頼るのでなく、従来からのガードレール、つまりLinterとテストも設定しておくことが重要です。
 
-Reactであればeslint-plugin-jsx-a11y、Vue.jsであればeslint-plugin-vuejs-accessibility、Svelteはコンパイラとしてのsvelte-check、出力されたHTMLにはMarkuplint、E2Eテストでは@axe-core/playwrightなどを活用し、生成されたコードの品質チェックをしていきましょう。
+Reactであれば[eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)、Vue.jsであれば[eslint-plugin-vuejs-accessibility](https://www.npmjs.com/package/eslint-plugin-vuejs-accessibility)、Svelteは[svelte-check](https://www.npmjs.com/package/svelte-check)、出力されたHTMLには[Markuplint](https://www.npmjs.com/package/markuplint)、E2Eテストでは[@axe-core/playwright](https://www.npmjs.com/package/@axe-core/playwright)などを活用し、生成されたコードの品質チェックをしていきましょう。
 
 ### 生成AIによるWebアクセシビリティ改善まとめ
 
@@ -167,7 +196,7 @@ Reactであればeslint-plugin-jsx-a11y、Vue.jsであればeslint-plugin-vuejs-
 
 - コード生成時はアクセシビリティ指示を含めず、生成後にレビュー・修正を繰り返す手法（ReAct）が有効
 - ペルソナに基づいたテストケースをAIに理解させ、レビューを入念に行う
-- 生成AIが苦手なARIAは、RAGやMCPで正しい情報（仕様）を外部から与え、不備をなくす
+- 生成AIが苦手なWAI-ARIAは、RAGやMCPで正しい情報（仕様）を外部から与えて不備を減らす
 - アクセシビリティツリーをチェックできるPlaywright MCPは有用
 - Linterやテストによるガードレールも忘れずに設定する
 
@@ -175,11 +204,15 @@ Reactであればeslint-plugin-jsx-a11y、Vue.jsであればeslint-plugin-vuejs-
 
 ## おわりに
 
-現代のWebアクセシビリティ改善でなくてはならない存在であるaxe-coreの開発するDeque社もアクセシビリティチェックとAIと関連させた「Axe AI」プロジェクトを発表しています。
+現代のWebアクセシビリティ改善でなくてはならない存在であるAxeの開発するDeque社もアクセシビリティチェックとAIと関連させた「[Axe AI](https://www.deque.com/axe/ai/)」プロジェクトを発表しています。
 
-Deque社が掲げる将来のビジョンは「専門家でなくても100%のアクセシビリティテストを可能にすること」です。これはかなり野心的な挑戦だと感じており、Webアクセシビリティの改善を考える同じ立場のものとして期待しているところはあります。
+Deque社が掲げる将来のビジョンは
 
-AIの進化は凄まじく、AIにすべて任せればアクセシビリティ問題は解決するのでは？と思うかもしれません。実際Be My EyesのようなAIと障害当事者への問題解決に関連するプロダクトは存在しています。
+> 「専門家でなくても100%のアクセシビリティテストを可能にすること」
+
+です。これはかなり野心的な挑戦だと感じており、Webアクセシビリティの改善を考える同じ立場のものとして期待しているところはあります。
+
+AIの進化は凄まじく、AIにすべて任せればアクセシビリティ問題は解決するのでは？と思うかもしれません。実際、[Be My Eyes](https://www.bemyeyes.com/ja/)のようなAIと障害当事者への問題解決に関連するプロダクトは存在しています。
 
 ですが、本当にそのままでよいのでしょうか？
 
