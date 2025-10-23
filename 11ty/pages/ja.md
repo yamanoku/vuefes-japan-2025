@@ -5,7 +5,7 @@ description: Vue Fes Japan 2025の登壇資料
 lang: ja
 ---
 
-![スライドタイトル：生成AI時代のWebアプリケーションアクセシビリティ改善](../images/title.png)
+![スライドタイトル：生成AI時代のWebアプリケーションアクセシビリティ改善](../images/title-ja.png)
 
 ## 翻訳記事一覧
 
