@@ -26,9 +26,9 @@ layout: center
 ---
 
 <div grid="~ cols-2 gap-x-10" class="content-center">
-  <img src="./images/image18.png" alt="">
+  <img src="./images/vuefes-japan-online-2022.png" alt="">
 
-  <img src="./images/image4.png" alt="">
+  <img src="./images/vuefes-japan-2023.png" alt="">
 
   <a href="https://vuefes.jp/2022/sessions/yamanoku">Vue Fes Japan Online 2022</a>での発表資料
 
@@ -56,7 +56,7 @@ layout: center
 ---
 
 <div class="flex justify-center">
-  <img src="./images/image12.png" width="640" alt="">
+  <img src="./images/usability-accessibility.png" width="640" alt="">
 </div>
 
 <small>
@@ -142,7 +142,7 @@ layout: center
 ---
 
 <div class="flex justify-center mb-6">
-  <img src="./images/image8.png" width="450" alt="">
+  <img src="./images/wcag-iso-jis.png" width="450" alt="">
 </div>
 
 <small>
@@ -244,7 +244,7 @@ layout: section
 ## LLMはアクセシブルなコードを生成できるかの研究
 
 <div class="flex justify-center my-4">
-  <img src="./images/image13.png" width="640" alt="">
+  <img src="./images/arxiv-research.png" width="640" alt="">
 </div>
 
 <small>
@@ -347,7 +347,7 @@ Naiveでは基本的なWebアクセシビリティ改善、例えばHTMLを活�
 ## FeedA11y
 
 <div class="flex justify-center my-4">
-  <img src="./images/image9.png" width="500" alt="FeedA11yの仕組み">
+  <img src="./images/feeda11y.png" width="500" alt="FeedA11yの仕組み">
 </div>
 
 <!--
@@ -393,7 +393,7 @@ layout: section
 ## レポートフォーマットによってチェックシート生成
 
 <div class="flex justify-center mb-4">
-  <img src="./images/image19.png" width="560" alt="">
+  <img src="./images/gaudiy-report-format.png" width="560" alt="">
 </div>
 
 <small>出典：株式会社Gaudiy <a href="https://speakerdeck.com/maminami373/automating-web-accessibility-testing-with-ai-agents">Automating Web Accessibility Testing with AI Agents</a> p.38</small>
@@ -413,7 +413,7 @@ layout: section
 ## 当事者のペルソナを設定したテストケースを用意してみる
 
 <div class="flex justify-center mb-4">
-  <img src="./images/image17.png" width="560" alt="">
+  <img src="./images/inclusive-persona-extension.png" width="560" alt="">
 </div>
 
 <small><a href="https://github.com/caztcha/Inclusive-Persona-Extension">Inclusive Persona Extension / インクルーシブなペルソナ拡張</a></small>
@@ -429,7 +429,7 @@ layout: center
 class: bg-[#24292e]
 ---
 
-<img src="./images/image6.png" alt="">
+<img src="./images/scenario-01.png" alt="">
 
 <!--
 このペルソナに基づき、AIに「シナリオ 1: ページ読み込みと基本ランドマーク（header, mainなど）の存在確認」 といったものや
@@ -440,7 +440,7 @@ layout: center
 class: bg-[#24292e]
 ---
 
-<img src="./images/image20.png" alt="">
+<img src="./images/scenario-02.png" alt="">
 
 <!--
 「シナリオ 2: 文字のぼやけを想定し、フォントサイズを150%にしても可読性があるか」といったテストケースを実行させることができます。
@@ -475,7 +475,7 @@ layout: section
 ## WAI-ARIAとは？
 
 <div class="flex justify-center mb-4">
-  <img src="./images/image1.png" alt="">
+  <img src="./images/wcag.png" alt="">
 </div>
 
 <small>出典：<a href="https://wicg.github.io/aom/demos/">Accessibility Object Model</a> p.4</small>
@@ -546,7 +546,7 @@ layout: section
 
 ## aria-validate-mcp-server
 
-<img src="./images/image14.png" alt="aria-validate-mcp-server" class="absolute right-15 top-auto bottom-40 my-auto w-64">
+<img src="./images/aria-validate-mcp-server.png" alt="aria-validate-mcp-server" class="absolute right-15 top-auto bottom-40 my-auto w-64">
 
 - aria-queryを活用したARIAのバリデーション用MCPサーバー
 - WAI-ARIA 1.2対応のrole、ARIA属性のそれぞれを取得できる
@@ -568,7 +568,7 @@ class: bg-[#faf9f5]
 ---
 
 <div class="flex justify-center">
-  <img src="./images/image15.png" width="640" alt="aria-validate-mcp-serverの利用例">
+  <img src="./images/usage-aria-validate-mcp-server.png" width="640" alt="aria-validate-mcp-serverの利用例">
 </div>
 
 <!--
@@ -604,7 +604,7 @@ layout: section
 
 ## baseline-mcp-server
 
-<img src="./images/image16.png" alt="baseline-mcp-server" class="absolute right-15 top-auto bottom-40 my-auto w-64">
+<img src="./images/baseline-mcp-server.png" alt="baseline-mcp-server" class="absolute right-15 top-auto bottom-40 my-auto w-64">
 
 - Baselineの状況を確認できるMCPサーバー
 - WAI-ARIAではなく最新のHTML・CSSを活用できるかの知識に活用
@@ -808,7 +808,7 @@ layout: statement
 
 ## 発表者：やまのく（yamanoku）
 
-<img src="./images/image3.png" alt="yamanoku" width="280">
+<img src="./images/yamanoku.png" alt="yamanoku" width="280">
 
 一児の父。会社員。
 
