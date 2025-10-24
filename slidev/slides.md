@@ -165,7 +165,7 @@ layout: center
 </div>
 
 <small>
-出典：デジタル庁 <a href="https://www.digital.go.jp/resources/introduction-to-web-accessibility-guidebook">ウェブアクセシビリティ導入ガイドブック</a>（2024年3月29日発行）p.16
+出典：デジタル庁 <a href="https://www.digital.go.jp/resources/introduction-to-web-accessibility-guidebook">ウェブアクセシビリティ導入ガイドブック</a>（策定日：2025年10月16日）p.16
 </small>
 
 <!--
