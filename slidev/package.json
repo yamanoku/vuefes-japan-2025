@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build --base /slide/ --out ../docs/slide/",
+    "build": "slidev build --base /vuefes-japan-2025/slide/ --out ../docs/slide/",
     "dev": "slidev --open",
     "export": "slidev export"
   },

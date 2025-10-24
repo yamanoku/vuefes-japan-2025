@@ -7,6 +7,10 @@ title: 生成AI時代のWebアプリケーションアクセシビリティ改�
 mdc: true
 fonts:
   sans: Roboto, "Noto Sans JP"
+seoMeta:
+  ogDescription: yamanokuのVue Fes Japan 2025登壇資料
+  ogImage: https://yamanoku.net/vuefes-japan-2025/images/ogp-image-ja.png
+  twitterCard: summary_large_image
 ---
 
 <h1 mt="12">生成AI時代の<br>Webアプリケーション<br>アクセシビリティ改善</h1>

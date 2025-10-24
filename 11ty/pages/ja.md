@@ -1,7 +1,7 @@
 ---
 layout: layout
 title: 生成AI時代のWebアプリケーションアクセシビリティ改善
-description: Vue Fes Japan 2025の登壇資料
+description: yamanokuのVue Fes Japan 2025登壇資料
 lang: ja
 ---
 
