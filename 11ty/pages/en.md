@@ -240,7 +240,7 @@ Deque, which develops axe—an indispensable tool for modern web accessibility i
 
 Deque aims for the following regarding the future of accessibility testing:
 
-> "To make 100% accessibility testing possible for non-experts"[^2]
+> "100% accessibility testing enabled for novices."[^2]
 
 [^2]: [Automation Gains: Increasing what can be automated in accessibility testing - axe-con](https://www.deque.com/axe-con/sessions/automation-gains-increasing-what-can-be-automated-in-accessibility-testing/)
 
