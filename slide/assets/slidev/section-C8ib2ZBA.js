@@ -1,0 +1,1 @@
+import{f as s,o,g as t,j as a}from"../modules/vue-S3NNZXlQ.js";import{u as r}from"./context-DD0_HpeS.js";const c={class:"slidev-layout h-full grid section"},l={class:"my-auto"},u={__name:"section",setup(n){return r(),(e,i)=>(o(),s("div",c,[t("div",l,[a(e.$slots,"default")])]))}};export{u as _};
