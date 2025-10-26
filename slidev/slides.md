@@ -113,7 +113,7 @@ Webアクセシビリティを実現するために対応できるというこ�
 
 ---
 layout: image
-image: '/images/vuefes-japan-2025-site.png'
+image: 'https://yamanoku.net/vuefes-japan-2025/images/vuefes-japan-2025-site.png'
 ---
 
 ---
